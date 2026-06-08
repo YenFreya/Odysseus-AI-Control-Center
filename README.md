@@ -213,7 +213,7 @@ This project was developed using a combination of human design and AI-assisted d
 * All AI-generated content was reviewed and modified by the developer
 * Development followed an iterative “vibe coding” workflow
 
-Estimated AI contribution: **~60–80%**
+Estimated AI contribution: **~80–90%**
 
 This disclosure is for transparency only and does not affect functionality or safety.
 
