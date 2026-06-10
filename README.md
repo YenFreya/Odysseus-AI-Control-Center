@@ -8,19 +8,22 @@ Odysseus AI Control Center centralizes core tasks such as Docker and Ollama serv
 
 # 🟢 STABLE RELEASE (MAIN BRANCH)
 
-This repository contains the **latest stable version (v1.3.1 - Athena)** of Odysseus AI Control Center.
+This repository contains the **latest stable version (v1.4.0 - Mnemosyne)** of Odysseus AI Control Center.
 
 This is the **recommended version for installation and daily use**.
 
-It has been tested on the developer’s system and represents the current stable feature set.
+Mnemosyne builds upon the stability-focused philosophy introduced by Athena while simplifying the architecture even further.
+
+It has been tested primarily on the developer’s personal system and represents the current stable feature set.
 
 ⚠️ Notes:
 
-This project is currently in a maintenance-only state
-No active feature development is planned unless issues are reported
-Updates will be released only for bug fixes or compatibility problems
-Performance and behavior may vary across different systems
-This release represents the stable baseline version
+* This project is currently in a maintenance-only state
+* No active feature development is planned unless issues are reported
+* Updates will be released only for bug fixes or compatibility problems
+* Performance and behavior may vary across different systems
+* Tested primarily on the developer's personal system
+* This release represents the current stable baseline version
 
 ---
 
@@ -46,7 +49,7 @@ View system status, installed models, logs, and service controls in one place.
 
 <img src="https://github.com/user-attachments/assets/59798115-7a1c-4ddf-b25c-4d057f9e6807" alt="Starting AI Services" />
 
-Starts Docker, Ollama, and Odysseus with automated readiness checks.
+Starts Docker, Ollama, and Odysseus with automated readiness checks and startup validation.
 
 ---
 
@@ -68,15 +71,15 @@ Displays locally installed Ollama models with metadata and system information.
 
 ### 📊 System Health Check
 
-<img src="https://github.com/user-attachments/assets/04a0740b-4200-4f07-9f5f-af73af6a6991" alt="Log Viewer" />
+<img src="https://github.com/user-attachments/assets/04a0740b-4200-4f07-9f5f-af73af6a6991" alt="Health Check" />
 
-Shows system status, storage usage, logs, and watchdog monitoring state.
+Shows system status, storage usage, service health information, and environment diagnostics.
 
 ---
 
 ### 📜 Log Viewer
 
-<img src="https://github.com/user-attachments/assets/3ceffc29-7591-40bd-8e61-969940cdfc62" alt="System Health Check" />
+<img src="https://github.com/user-attachments/assets/3ceffc29-7591-40bd-8e61-969940cdfc62" alt="Log Viewer" />
 
 Provides access to system and application logs for debugging and monitoring.
 
@@ -86,11 +89,11 @@ Provides access to system and application logs for debugging and monitoring.
 
 <img src="https://github.com/user-attachments/assets/697f281d-3f31-4a4f-ba2a-5278c0171e3c" alt="Settings" />
 
-Allows configuration of watchdog mode, data path, and basic system preferences.
+Allows configuration of data paths, utility shortcuts, and basic system preferences.
 
 ---
 
-# ✨ Features (v1.3.1 Stable)
+# ✨ Features (v1.4.0 Stable)
 
 ## 🔍 Environment Checks
 
@@ -100,6 +103,7 @@ Allows configuration of watchdog mode, data path, and basic system preferences.
 * Check WSL availability (if enabled)
 * Verify system tools (e.g., curl)
 * Perform startup readiness checks
+* Perform startup validation before reporting success
 * Provide diagnostic output for troubleshooting
 
 ---
@@ -110,7 +114,9 @@ Allows configuration of watchdog mode, data path, and basic system preferences.
 * Auto-start Docker and Ollama when needed
 * Monitor service startup status
 * Validate system readiness before launching
-* Retry startup when services fail
+* Startup validation before reporting success
+* Restart Odysseus directly from the main menu
+* Graceful shutdown controls
 
 ---
 
@@ -119,7 +125,7 @@ Allows configuration of watchdog mode, data path, and basic system preferences.
 * View installed Ollama models
 * Monitor storage usage
 * Access logs and system status
-* Watchdog monitoring mode (with safe limits)
+* Startup validation diagnostics
 * Basic configuration for data paths
 
 ---
@@ -129,6 +135,39 @@ Allows configuration of watchdog mode, data path, and basic system preferences.
 * Docker status checking and basic troubleshooting guidance
 * WSL detection and setup guidance
 * General system health diagnostics
+* Restart Odysseus workflow
+* Log management and troubleshooting tools
+
+---
+
+# 🆕 What's New in Mnemosyne
+
+### Added
+
+* Startup Validation System
+* Restart Odysseus menu option
+* Improved startup diagnostics
+* WSL shutdown during restart operations
+* Clearer startup failure handling
+* Improved logging visibility
+
+### Removed
+
+* Watchdog monitoring subsystem
+* Watchdog background process
+* Watchdog PID tracking
+* Watchdog configuration settings
+* Watchdog health display
+* Automatic crash recovery automation
+
+### Improved
+
+* Startup reliability
+* Recovery workflow
+* Logging transparency
+* Maintainability
+* Code simplicity
+* Predictable behavior
 
 ---
 
@@ -159,7 +198,7 @@ It reduces manual setup steps and improves usability for local AI workflows.
 # 📚 Installation
 
 1. Install Docker, Ollama, and Odysseus dependencies
-2. Download latest stable release (v1.3.1)
+2. Download latest stable release (v1.4.0)
 3. Extract the package
 4. Run `Odysseus AI Control Center.bat`
 5. Follow setup instructions
@@ -168,11 +207,20 @@ It reduces manual setup steps and improves usability for local AI workflows.
 
 # 📖 Installation Reference
 
-📺 [https://youtu.be/qiy-oPT8IhE](https://youtu.be/qiy-oPT8IhE)
+📺 https://youtu.be/qiy-oPT8IhE
 
 This guide was used during setup and development as a reference for installing Odysseus and required dependencies.
 
 > Always refer to official Odysseus documentation for latest updates and configuration details.
+
+---
+
+# 📜 Release History
+
+* v1.4.0 — Mnemosyne (Current Stable)
+* v1.3.1 — Athena
+* v1.2.0 — Icarus
+* v1.0.0 — Genesis
 
 ---
 
@@ -182,10 +230,10 @@ Odysseus AI Control Center is provided **"as is" without any warranties or guara
 
 This software:
 
-* Has been tested on the developer’s system only
+* Has been tested primarily on the developer’s personal system
 * May behave differently on other machines or system configurations
-* Is currently in a **stable, maintenance-only state (no active feature development)**
-* Will only receive updates if **bugs or compatibility issues are reported**
+* Is currently in a **stable, maintenance-only state**
+* Will only receive updates if bugs or compatibility issues are reported
 
 Users are responsible for:
 
@@ -211,7 +259,7 @@ This project was developed using a combination of human design and AI-assisted d
 
 * Portions of the code, logic, and documentation were generated or refined using AI systems
 * All AI-generated content was reviewed and modified by the developer
-* Development followed an iterative “vibe coding” workflow
+* Development followed an iterative AI-assisted workflow
 
 Estimated AI contribution: **~80–90%**
 
@@ -222,6 +270,8 @@ This disclosure is for transparency only and does not affect functionality or sa
 # 👨‍💻 Author
 
 Created and maintained by **Yen The Programmer**
+
+Beginner developer learning software development through experimentation, self-hosting, open-source projects, and AI-assisted workflows.
 
 ---
 
